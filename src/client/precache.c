@@ -349,9 +349,11 @@ void CL_PrepRefresh(void)
 
 #if CL_RTX_SHADERBALLS
 	cvar_shaderballs = Cvar_Get("cl_shaderballs", "0", CVAR_ARCHIVE);
+    if (!cvar_shaderballs->integer) cvar_shaderballs->integer = 1;
 	if (cvar_shaderballs->integer)
 	{
-		cl_dev_shaderballs = R_RegisterModel("develop/objects/ShaderBallArray/ShaderBallArray16.MD3");
+		//cl_dev_shaderballs = R_RegisterModel("develop/objects/ShaderBallArray/ShaderBallArray16.MD3");
+		cl_dev_shaderballs = R_RegisterModel("models/objects/nassim/Name.md2");
 		Com_WPrintf("Precached ShaderBalls - remove from release build !");
 	}
 #endif

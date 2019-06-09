@@ -1562,6 +1562,9 @@ prepare_entities(EntityUploadInfo* upload_info)
 			entity.model = cl_dev_shaderballs;
 			VectorClear(entity.angles);
 			VectorCopy(cl_dev_shaderballs_pos, entity.origin);
+            entity.angles[0] = sinf((float)Sys_Milliseconds() / 1000) * 5.0f;
+            entity.angles[1] = (float)(Sys_Milliseconds() / 100);
+            entity.scale = 5.0f;
 			entity.frame = 0;
 			VectorClear(entity.oldorigin);
 			entity.oldframe = 0;
@@ -2490,7 +2493,7 @@ R_Init_RTX(qboolean total)
 	Cmd_AddCommand("show_pvs", (xcommand_t)&vkpt_show_pvs);
 	Cmd_AddCommand("next_sun", (xcommand_t)&vkpt_next_sun_preset);
 #if CL_RTX_SHADERBALLS
-	Cmd_AddCommand("drop_balls", (xcommand_t)&vkpt_drop_shaderballs);
+	Cmd_AddCommand("drop_nas0x0309", (xcommand_t)&vkpt_drop_shaderballs);
 #endif
 
 	for (int i = 0; i < 256; i++) {
@@ -2515,7 +2518,7 @@ R_Shutdown_RTX(qboolean total)
 	Cmd_RemoveCommand("show_pvs");
 	Cmd_RemoveCommand("next_sun");
 #if CL_RTX_SHADERBALLS
-	Cmd_RemoveCommand("drop_balls");
+	Cmd_RemoveCommand("drop_nas0x0309");
 #endif
 	
 	IMG_FreeAll();
