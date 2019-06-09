@@ -1,6 +1,6 @@
 # Quake II RTX Optim v0.1
 
-![](RTX_Quake2_Nas2.mp4)
+![](RTX_Quake2_Nas2.gif)
 
 **Quake II RTX** is NVIDIA's attempt at implemeting a fully functional 
 version of Id Software's 1997 hit game **Quake II** with RTX path-traced 
