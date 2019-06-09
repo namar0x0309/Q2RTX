@@ -139,10 +139,9 @@ other computers, so choose a good password.
 
 # Console
 gamemap <mapname> (tab to see list of maps)
-  
+
 noclip (after pressing ~ while in game)
 
 give all (all items)
 
 notarget (enemies can't see you)
-
