@@ -103,9 +103,9 @@ VkResult vkpt_initialize_god_rays()
 	vkGetPhysicalDeviceProperties(qvk.physical_device, &properties);
 
 	god_rays.density_scale = Cvar_Get("gr_density_scale", "-3.0", 0);
-	god_rays.intensity = Cvar_Get("gr_intensity", "1.0", 0);
+	god_rays.intensity = Cvar_Get("gr_intensity", "5.0", 0);
 	god_rays.shadow_bias = Cvar_Get("gr_shadow_bias", "20.0", 0);
-	god_rays.eccentricity = Cvar_Get("gr_eccentricity", "0.75", 0);
+	god_rays.eccentricity = Cvar_Get("gr_eccentricity", "0.5", 0);
 	god_rays.enable = Cvar_Get("gr_enable", "1", 0);
 
 	god_rays.device_buffer_size = align(sizeof(GodRaysConstants), properties.limits.minUniformBufferOffsetAlignment);

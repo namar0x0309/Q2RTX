@@ -225,6 +225,9 @@ direct_lighting(ivec2 ipos, bool is_odd_checkerboard, out vec3 high_freq, out ve
         	primary_roughness,
         	primary_emissive);
 
+        primary_specular *= 1.1f;
+        primary_roughness = .1f;
+
         // Extinction in the primary ray
 		if(global_ubo.medium != MEDIUM_NONE)
 		{
@@ -240,10 +243,10 @@ direct_lighting(ivec2 ipos, bool is_odd_checkerboard, out vec3 high_freq, out ve
 		bool primary_is_slime = is_slime(material_id);
 		bool primary_is_glass = is_glass(material_id);
 		bool primary_is_transparent = is_transparent(material_id);
-		bool primary_is_chrome = (primary_roughness < 0.02 && is_chrome(material_id));
-		bool primary_is_screen = (primary_roughness < 0.02 && is_screen(material_id));
+		bool primary_is_chrome = (primary_roughness < 0.05 && is_chrome(material_id));
+		bool primary_is_screen = (primary_roughness < 0.05 && is_screen(material_id));
 
-		int is_reflected_or_refracted = 0;
+        int is_reflected_or_refracted = 0;
 
 		// Process reflection or refraction.
 		// Each pixel follows either the reflected or the refracted path, depending on 

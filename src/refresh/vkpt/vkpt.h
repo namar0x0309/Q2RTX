@@ -49,8 +49,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #define MIN(a,b) ((a) < (b) ? (a) : (b))
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 
+#ifdef _DEBUG_
+#define LOG_FUNC_(f) Com_Printf("%s\n", f)
+#else
 #define LOG_FUNC_(f) do {} while(0)
-//#define LOG_FUNC_(f) Com_Printf("%s\n", f)
+#endif
 #define LOG_FUNC() LOG_FUNC_(__func__)
 
 #ifdef _DEBUG
