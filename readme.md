@@ -134,3 +134,9 @@ Note: the password set here should match the password specified in the korgi con
 
 Note 2: enabling the rcon backdoor allows other people to issue console commands to your game from 
 other computers, so choose a good password.
+
+# Console
+gamemap <mapname> (tab to see list of maps)
+noclip (after pressing ~ while in game)
+give all (all items)
+notarget (enemies can't see you)

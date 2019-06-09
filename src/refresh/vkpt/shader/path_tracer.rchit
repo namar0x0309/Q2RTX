@@ -39,5 +39,6 @@ main()
 	{
 		ray_payload.instance_prim |= INSTANCE_SKY_FLAG;
 	}
+
 	ray_payload.hit_distance   = gl_HitTNV;
 }
