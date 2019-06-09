@@ -1,4 +1,6 @@
-# Quake II RTX
+# Quake II RTX Optim v0.1
+
+![](RTX_Quake2_Nas2.mp4)
 
 **Quake II RTX** is NVIDIA's attempt at implemeting a fully functional 
 version of Id Software's 1997 hit game **Quake II** with RTX path-traced 
@@ -82,7 +84,7 @@ Note: distributions that are binary compatible with Ubuntu 16 should work as wel
 |-----------------------------------------------------|-------------|
 | NVIDIA driver <br> https://www.geforce.com/drivers  | 430         |
 | git <br> https://git-scm.com/downloads              | 2.15        |
-| CMake <br> https://cmake.org/download/              | 3.8         |
+| CMake <br> https://cmake.org/download/              | 3.15        |
 | Vulkan SDK <br> https://www.lunarg.com/vulkan-sdk/  | 1.1.92      |
 
 ## Submodules
@@ -137,6 +139,10 @@ other computers, so choose a good password.
 
 # Console
 gamemap <mapname> (tab to see list of maps)
+  
 noclip (after pressing ~ while in game)
+
 give all (all items)
+
 notarget (enemies can't see you)
+
